@@ -1,0 +1,58 @@
+# IOS Notes
+
+# TextView
+    Text("I am frontend IOS developer ")
+         .foregroundColor(.white) // TextColor
+         .font(.body) // fontSize ===> system body font size
+         .multilineTextAlignment(.center) // multiline text alignment
+         .lineLimit(2)  // number of lines
+         .opacity(0.7)  // opacity of text
+
+# TextView with shadow and with system size font
+                      Text("Your Name")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20)) // font size
+                        .fontWeight(.bold)
+                        .shadow(color: .pink, radius: 6, x: 6, y: 6)
+
+
+# ImageView
+                      Image("Vector")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit) // need to understand
+                        .frame(width: 280,height: 280,alignment: .bottom) // to give width , height and alignment
+                        .clipShape(Circle())  --> To make image circular
+                        .shadow(color:.pink, radius: 16, x: 10, y: 10)
+
+Note 
+ 1. frame can we apply to any view to give height , width and alignment 
+ 2. shadow can we apply to any view to give shadow 
+
+ # IconImage 
+
+         Image(systemName: "phone.circle")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+
+# RoundedRectangleView
+
+                     RoundedRectangle(cornerRadius: 16)
+                        .frame(width: 160,height: 50,alignment: .center)
+                        .foregroundColor(.white)
+                        .shadow(color: .black, radius: 16, x: 16, y: 16)
+                        .overlay(
+                            Text("Follow")
+                                .fontWeight(.bold)
+                                .foregroundColor(.pink)
+                                .font(.system(size: 20))
+                        )
+
+# Spacer() 
+# HStack
+HStack(alignment: .center, spacing: 60){
+    // Horizontal stack (row)
+    // alignment property work for center 
+    // spacing property work for space b/w its child
+
+
+}.padding() <---- it will given some internal padding
